@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Update data</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<form method="post">
+    
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Name</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" value="{{users_html.name}}" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Age</label>
+      <input type="text" class="form-control" id="exampleInputPassword1" value="{{users_html.age}}" >
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Location</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" value="{{users_html.location}}">
+      </div>
+    
+    <button type="submit" class="btn btn-primary">update</button>
+  </form>
+</div>
+
+
+{% endblock %}

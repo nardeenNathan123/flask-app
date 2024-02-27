@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>users</title>
+{% endblock %}
+
+{% block body %}
+        
+
+        <table class="table">
+            <thead>
+              <tr>
+                    {% for element in users_html[0].keys() %}
+                           <th scope="col">{{element}}</th>
+                    {% endfor %}
+                    
+              </tr>
+            </thead>
+            {% for user in users_html %} {# user {dictionary} #}
+            <tbody>
+                    
+                    <td>{{user._id}}</td>
+                    <td>{{user.name}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.locaion}}</td> 
+                   
+                    
+            </tbody>
+            {% endfor %}
+          </table>
+{% endblock %}
+
+
+
+
